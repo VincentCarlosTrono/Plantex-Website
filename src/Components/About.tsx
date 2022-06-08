@@ -32,7 +32,7 @@ const About = () => {
             const { number, title, description } = aboutDetail;
             return (
               <div className="py-5">
-                <div className="bg-white rounded-lg p-5  md:p-10  hover:-translate-y-2 hover:cursor-pointer ">
+                <div className="bg-white rounded-lg p-5  md:p-15  hover:-translate-y-2 hover:cursor-pointer ">
                   <div className="bg-darkgreen grid justify-center items-center w-14 h-14 rounded-lg">
                     <h1 className="text-white ">{number}</h1>
                   </div>

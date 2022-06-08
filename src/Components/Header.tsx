@@ -37,10 +37,12 @@ const Header = () => {
         scroll && "shadow-lg dark:shadow-black ease-in duration-500"
       }`}
     >
-      <div className="col-start-2 col-end-3 flex justify-between p-5 md:p-10  ">
+      <div className="col-start-2 col-end-3 flex justify-between  p-5 md:p-10  ">
         <div className="flex">
           <box-icon color="green" name="leaf"></box-icon>
-          <h1 className="">PLANTEX</h1>
+          <h1 className="hover:text-green-600 hover:cursor-pointer font-semibold">
+            PLANTEX
+          </h1>
         </div>
         <div className="md:flex justify-evenly gap-16 hidden ">
           {navLists.map((navList: any) => {
@@ -60,28 +62,37 @@ const Header = () => {
           </div>
 
           <button
-            className="md:hidden block"
+            className="md:hidden block "
             onClick={() => {
               setOpen(!open);
             }}
           >
             <box-icon name="menu"></box-icon>
           </button>
-
-          {open && (
-            <div className="md:hidden block absolute right-0 top-28 ">
-              {navLists.map((navLists) => {
-                const { name } = navLists;
-                return (
-                  <div className="text-left">
-                    <ul>
-                      <li className="pr-44 pl-10 py-9 bg-white ">{name}</li>
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
-          )}
+          <div>
+            {open && (
+              <div className="md:hidden block absolute right-0 top-16 ">
+                <button
+                  className="absolute right-10 top-4 px-5 py-3 text-darkgreen"
+                  onClick={() => {
+                    setOpen(!open);
+                  }}
+                >
+                  X
+                </button>
+                {navLists.map((navLists) => {
+                  const { name } = navLists;
+                  return (
+                    <div className="text-left">
+                      <ul>
+                        <li className="pr-44 pl-10 py-12 bg-white  ">{name}</li>
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

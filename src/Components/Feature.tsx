@@ -30,7 +30,7 @@ const Feature = () => {
   ];
   return (
     <div className="grid-container">
-      <div className="col-start-2 cols-end-3 md:flex justify-center items-center py-12 md:py-24 gap-10">
+      <div className="col-start-2 cols-end-3 md:flex justify-center items-center py-12 md:py-24 gap-10 ">
         <div>
           <img className="p-10" src={About} alt="aboutImg" />
         </div>
