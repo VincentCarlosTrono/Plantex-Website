@@ -41,10 +41,12 @@ const Products = () => {
   ];
   return (
     <div className="grid-container">
-      <div className="col-start-2 col-end-3 px-20">
+      <div className="col-start-2 col-end-3 px-2 md:px-20">
         <div className="text-center">
           <div className="flex justify-center">
-            <h1 className="text-5xl p-5 max-w-lg">Check out our Products</h1>
+            <h1 className="md:text-5xl text-2xl font-semibold p-5 max-w-lg">
+              Check out our Products
+            </h1>
           </div>
           <div className="flex justify-center p-5">
             <p className="max-w-sm">
@@ -54,24 +56,28 @@ const Products = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-24  py-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-24  py-24">
           {products.map((product: any) => {
             const { image, name, price } = product;
             return (
-              <div className="grid justify-center items-center shadow-lg p-2 relative">
+              <div className="grid justify-center items-center shadow-lg p-3 md:p-2 relative">
                 <div className="relative ">
                   <img
                     className="w-48 px-2 hover:-translate-y-2 hover:cursor-pointer"
                     src={image}
                     alt="productImage"
                   />
-                  <div className="w-32 h-32 bg-lightgray rounded-full absolute top-20 -z-10"></div>
+                  <div className=" w-24 h-24 md:w-32 md:h-32 bg-lightgray rounded-full absolute top-7 md:top-20 -z-10"></div>
                 </div>
 
                 <div>
-                  <h1 className="font-semibold">{name}</h1>
-                  <p className="font-semibold text-darkgreen">{price}</p>
-                  <div className="bg-darkgreen flex justify-end absolute bottom-2 right-2 p-2 rounded-xl">
+                  <h1 className="text-sm md:text-md md:font-semibold">
+                    {name}
+                  </h1>
+                  <p className=" text-sm md:text-md md:font-semibold text-darkgreen">
+                    {price}
+                  </p>
+                  <div className="bg-darkgreen flex justify-end absolute bottom-1 md:bottom-2 md:right-2 right-1 p-1 md:p-2 rounded-xl">
                     <box-icon color="white" name="shopping-bag"></box-icon>
                   </div>
                 </div>
