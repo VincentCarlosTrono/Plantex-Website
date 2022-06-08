@@ -7,6 +7,7 @@ import About from "./Components/About";
 import Products from "./Components/Products";
 import Questions from "./Components/Questions";
 import Faqs from "./Components/Faqs";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Products />
       <Questions />
       <Faqs />
+      <Footer />
     </div>
   );
 }

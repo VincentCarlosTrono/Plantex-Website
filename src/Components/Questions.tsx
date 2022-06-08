@@ -75,13 +75,13 @@ const Questions = () => {
             const { question, answer, isOpen } = info;
 
             return (
-              <div className="shadow-md">
+              <div 
                 {isOpen ? (
                   <div
                     className="bg-darkgreen py-5 px-5 md:px-10 font-bold  items-start md:gap-10 text-white "
                     onClick={() => toggleInfo(info)}
                   >
-                    <div className="">
+                    <div >
                       <button className="md:px-8 text-md  md:gap-10">
                         <div className="flex justify-start items-center">
                           <p className="md:p-5 pr-4 ">x</p>

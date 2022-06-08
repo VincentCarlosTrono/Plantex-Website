@@ -17,9 +17,9 @@ const Faqs = () => {
   return (
     <div className="grid-container md:py-28">
       <div className="col-start-2 col-end-3 ">
-        <div className="md:flex justify-between">
+        <div className="md:flex justify-between items-center">
           <div className="">
-            <h1 className=" text-center md:text-left px-20 text-xl md:text-4xl font-semibold md:max-w-md py-10">
+            <h1 className=" text-center md:text-left md:px-0 px-20 text-xl md:text-4xl font-semibold md:max-w-md py-10">
               Reach out to us today via any of the given information
             </h1>
             <div className="flex md:block justify-evenly">
