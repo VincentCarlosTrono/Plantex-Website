@@ -85,7 +85,7 @@ const Questions = () => {
                       <button className="md:px-8 text-md  md:gap-10">
                         <div className="flex justify-start items-center">
                           <p className="md:p-5 pr-4 ">x</p>
-                          <h1 className=" text-sm md:text-md font-semibold py-2">
+                          <h1 className=" text-sm md:text-lg font-semibold py-2">
                             {question}
                           </h1>
                         </div>
@@ -103,7 +103,7 @@ const Questions = () => {
                   >
                     <button className="px-8 text-md flex justify-center items-center md:gap-10">
                       <p className="md:p-5 pr-4 ">+</p>
-                      <h1 className="py-5 text-sm md:text-md">{question}</h1>
+                      <h1 className="py-5 text-sm md:text-lg">{question}</h1>
                     </button>
                   </div>
                 )}
