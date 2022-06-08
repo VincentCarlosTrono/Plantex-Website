@@ -31,15 +31,15 @@ const Feature = () => {
   return (
     <div className="grid-container">
       <div className="col-start-2 cols-end-3 md:flex justify-center items-center py-12 md:py-24 gap-10 ">
-        <div>
+        <div data-aos="fade-right">
           <img className="p-10" src={About} alt="aboutImg" />
         </div>
 
-        <div>
-          <h1 className="font-semibold text-3xl md:text-5xl max-w-lg py-5">
+        <div data-aos="fade-left">
+          <h1 className="font-semibold text-3xl md:text-5xl max-w-lg py-5 dark:text-white">
             Who we really are & why choose us
           </h1>
-          <p className="py-2 md:py-5 text-gray-600 max-w-lg text-sm md:text-lg md:max-w-sm">
+          <p className="py-2 md:py-5 text-gray-500 max-w-lg text-sm md:text-lg md:max-w-sm">
             We have over 4000+ unbiased reviews and our customers trust our
             plant process and delivery service every time.
           </p>

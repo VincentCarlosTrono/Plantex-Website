@@ -12,55 +12,65 @@ const Products = () => {
       image: Product1,
       name: "Cacti Plant",
       price: "$19.00",
+      duration: "500",
     },
     {
       image: Product2,
       name: "Cactus Plant",
       price: "$11.99",
+      duration: "1000",
     },
     {
       image: Product3,
       name: "Aloe Vera Plant",
       price: "$7.99",
+      duration: "1500",
     },
     {
       image: Product4,
       name: "Succulent Plant",
       price: "$5.99",
+      duration: "2000",
     },
     {
       image: Product5,
       name: "Succelent Plant",
       price: "$10.99",
+      duration: "1500",
     },
     {
       image: Product6,
       name: "Green Plant",
       price: "$8.99",
+      duration: "2500",
     },
   ];
   return (
-    <div className="grid-container">
+    <div className="grid-container" id="products" data-aos="fade-up">
       <div className="col-start-2 col-end-3 px-2 md:px-20">
         <div className="text-center">
           <div className="flex justify-center">
-            <h1 className="md:text-5xl text-2xl font-semibold p-5 max-w-lg">
+            <h1 className="md:text-5xl text-2xl font-semibold p-5 max-w-lg dark:text-white">
               Check out our Products
             </h1>
           </div>
-          <div className="flex justify-center p-5">
-            <p className="max-w-sm">
+          <div className="flex justify-center p-5 ">
+            <p className="max-w-sm text-gray-500">
               Here are some seleced plants from our showroom, all are in
               excellent shape and has a long life span. Buy and enjoy best
               quality
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-24  py-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-24  py-24 ">
           {products.map((product: any) => {
-            const { image, name, price } = product;
+            const { image, name, price, duration } = product;
             return (
-              <div className="grid justify-center items-center shadow-lg p-3 md:p-2 relative">
+              <div
+                className="grid justify-center items-center shadow-lg dark:shadow-black p-3 md:p-2 relative"
+                data-aos="fade-up"
+                data-aos-duration={duration}
+              >
                 <div className="relative ">
                   <img
                     className="w-48 px-2 hover:-translate-y-2 hover:cursor-pointer"
@@ -71,13 +81,13 @@ const Products = () => {
                 </div>
 
                 <div>
-                  <h1 className="text-sm md:text-md md:font-semibold">
+                  <h1 className="text-sm md:text-md md:font-semibold dark:text-white py-5">
                     {name}
                   </h1>
                   <p className=" text-sm md:text-md md:font-semibold text-darkgreen">
                     {price}
                   </p>
-                  <div className="bg-darkgreen flex justify-end absolute bottom-1 md:bottom-2 md:right-2 right-1 p-1 md:p-2 rounded-xl">
+                  <div className="bg-darkgreen flex justify-end absolute bottom-1 md:bottom-2 md:right-2 right-1 p-1 md:p-2 rounded-xl hover:cursor-pointer hover:-translate-y-2">
                     <box-icon color="white" name="shopping-bag"></box-icon>
                   </div>
                 </div>
