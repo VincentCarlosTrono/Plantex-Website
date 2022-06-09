@@ -3,7 +3,7 @@ import Home from "../img/home.png";
 
 const Hero = () => {
   return (
-    <div className="grid-container " data-aos="fade-up">
+    <div className="grid-container " data-aos="fade-down">
       <div className="col-start-2 col-end-3 md:flex justify-center items-center pt-8 md:pt-40 pb-0 md:pb-56">
         <div className="grid grid-cols-2 justify-end  items-center">
           <div className="justify-evenly flex">

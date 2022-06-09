@@ -108,13 +108,15 @@ const Header = () => {
                   X
                 </button>
                 {navLists.map((navLists) => {
-                  const { name } = navLists;
+                  const { name, link } = navLists;
                   return (
                     <div className="text-left">
                       <ul>
-                        <li className="pr-44 pl-10 py-12 dark:text-white bg-white  dark:bg-darkmodeGreen ">
-                          {name}
-                        </li>
+                        <a href={link}>
+                          <li className="pr-44 pl-10 py-12 dark:text-white bg-white  dark:bg-darkmodeGreen ">
+                            {name}
+                          </li>
+                        </a>
                       </ul>
                     </div>
                   );

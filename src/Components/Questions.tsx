@@ -64,7 +64,10 @@ const Questions = () => {
     });
   };
   return (
-    <div className="grid-container bg-lightgreen dark:bg-darkmodeLightGreen md:p-20 py-10">
+    <div
+      className="grid-container bg-lightgreen dark:bg-darkmodeLightGreen md:p-20 py-10"
+      data-aos="fade-up"
+    >
       <div className="col-start-2 cols-end-3 ">
         <h1 className="md:text-5xl text-2xl font-semibold md:text-left text-center md:max-w-2xl py-10 dark:text-white">
           Some common questions were often asks
@@ -99,7 +102,6 @@ const Questions = () => {
                 ) : (
                   <div
                     className="md:px-10  items-start md:gap-10 bg-white dark:bg-darkmodeDarkGreen"
-                    data-aos="fade-up"
                     onClick={() => toggleInfo(info)}
                   >
                     <button className="px-8 text-md flex justify-center items-center md:gap-10">
