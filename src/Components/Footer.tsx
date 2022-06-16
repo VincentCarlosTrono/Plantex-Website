@@ -1,47 +1,10 @@
-import React, { useContext } from "react";
-import { DarkmodeContext } from "src/DarkmodeContext";
-import card1 from "../img/card1.png";
-import card2 from "../img/card2.png";
-import card3 from "../img/card3.png";
-import card4 from "../img/card4.png";
+import React from "react";
+import FooterCards from "./FooterCards";
+import FooterInfo from "./FooterInfo";
 
 const Footer = () => {
-  const { darkmode } = useContext(DarkmodeContext);
-  const footerInfos = [
-    {
-      title: "Our Address",
-      info1: "123-Peru",
-      info2: "La Libertad - 43210",
-      info3: "123 - 456 - 789",
-    },
-    {
-      title: "Contact Us",
-      info1: "+999 888 777",
-      icon1: (
-        <box-icon
-          color={darkmode ? "white" : "black"}
-          name="facebook"
-          type="logo"
-        ></box-icon>
-      ),
-      icon2: (
-        <box-icon
-          color={darkmode ? "white" : "black"}
-          name="instagram-alt"
-          type="logo"
-        ></box-icon>
-      ),
-      icon3: (
-        <box-icon
-          color={darkmode ? "white" : "black"}
-          name="twitter"
-          type="logo"
-        ></box-icon>
-      ),
-    },
-  ];
   return (
-    <div className="grid-container" id="contact">
+    <div className="grid-container" id="contact" data-aos="fade-up">
       <div className="col-start-2 cols-end-3">
         <div className="md:grid grid-cols-3 justify-between gap-2 md:py-20">
           <div>
@@ -67,45 +30,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            {footerInfos.map((footerInfo: any) => {
-              return (
-                <div>
-                  <div>
-                    <h1 className="py-2 font-semibold dark:text-white ">
-                      {footerInfo.title}
-                    </h1>
-                    <p className="py-2 text-gray-500">{footerInfo.info1}</p>
-                    <div className="grid grid-rows-4 gap-2 text-gray-500">
-                      <p>{footerInfo?.info2}</p>
-                      <p>{footerInfo?.info3}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2 ">
-                    <p className="hover:cursor-pointer opacity-50 hover:opacity-100 hover:-translate-y-2">
-                      {footerInfo?.icon1}
-                    </p>
-                    <p className="hover:cursor-pointer opacity-50 hover:opacity-100 hover:-translate-y-2">
-                      {footerInfo?.icon2}
-                    </p>
-                    <p className="hover:cursor-pointer opacity-50 hover:opacity-100 hover:-translate-y-2">
-                      {footerInfo?.icon3}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            <FooterInfo />
           </div>
           <div>
-            <h1 className="font-semibold py-2 dark:text-white">
-              We accept all credit cards
-            </h1>
-            <div className="flex h-11 w-11 items-center gap-2">
-              <img src={card1} alt="card1" />
-              <img src={card2} alt="card2" />
-              <img src={card3} alt="card3" />
-              <img src={card4} alt="card4" />
-            </div>
+            <FooterCards />
           </div>
         </div>
         <div className="flex items-center justify-center text-gray-500 pb-5 pt-20">

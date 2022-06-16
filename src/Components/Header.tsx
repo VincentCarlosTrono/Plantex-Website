@@ -1,30 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
+import MenuMobile from "./MenuMobile";
+import Navigation from "./Navigation";
 import { DarkmodeContext } from "src/DarkmodeContext";
 
 const Header = () => {
-  const navLists = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "About",
-      link: "#about",
-    },
-    {
-      name: "Products",
-      link: "#products",
-    },
-    {
-      name: "FAQs",
-      link: "#faqs",
-    },
-    {
-      name: "Contact Us",
-      link: "#contact",
-    },
-  ];
-
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -50,79 +29,51 @@ const Header = () => {
             PLANTEX
           </h1>
         </div>
-        <div className="flex justify-center items-center gap-10">
-          <div className="md:flex justify-evenly gap-16 hidden ">
-            {navLists.map((navList: any) => {
-              const { name, link } = navList;
-              return (
-                <div>
-                  <ul className="">
-                    <a href={link}>
-                      {" "}
-                      <li className=" hover:border-b-2 hover:-translate-y-2 hover:border-darkgreen hover:cursor-pointer font-semibold">
-                        {name}
-                      </li>
-                    </a>
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
+        <div className="flex gap-10 items-center">
+          <Navigation />
+
           <div className="flex gap-2">
-            <div className="">
-              <button
-                className="p-3"
-                onClick={() => {
-                  setDarkmode(!darkmode);
-                }}
-              >
-                {darkmode ? (
-                  <box-icon color="white" name="sun"></box-icon>
-                ) : (
-                  <box-icon name="moon"></box-icon>
-                )}
-              </button>
-            </div>
+            <button
+              className="p-3"
+              onClick={() => {
+                setDarkmode(!darkmode);
+              }}
+            >
+              {darkmode ? (
+                <box-icon color="white" name="sun"></box-icon>
+              ) : (
+                <box-icon name="moon"></box-icon>
+              )}
+            </button>
           </div>
 
-          <button
-            className="md:hidden block "
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            <box-icon
-              color={darkmode ? "white" : "black"}
-              name="menu"
-            ></box-icon>
-          </button>
           <div>
-            {open && (
-              <div className="md:hidden block absolute right-0 top-16 ">
-                <button
-                  className="absolute right-10 top-4 px-5 py-3 text-darkgreen dark:text-white"
-                  onClick={() => {
-                    setOpen(!open);
-                  }}
-                >
-                  X
-                </button>
-                {navLists.map((navLists) => {
-                  const { name, link } = navLists;
-                  return (
-                    <div className="text-left">
-                      <ul>
-                        <a href={link}>
-                          <li className="pr-44 pl-10 py-12 dark:text-white bg-white  dark:bg-darkmodeGreen ">
-                            {name}
-                          </li>
-                        </a>
-                      </ul>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
+            <button
+              className="md:hidden block "
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              <box-icon
+                color={darkmode ? "white" : "black"}
+                name="menu"
+              ></box-icon>
+            </button>
+            <div>
+              {open && (
+                <div className="md:hidden block absolute right-0 top-16 ">
+                  <button
+                    className="absolute right-10 top-4 px-5 py-3 text-darkgreen dark:text-white"
+                    onClick={() => {
+                      setOpen(!open);
+                    }}
+                  >
+                    X
+                  </button>
+                  <MenuMobile />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

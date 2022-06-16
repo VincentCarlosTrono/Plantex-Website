@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { InfoInterface } from "src/types";
 
 const Questions = () => {
   const [infos, setInfo] = useState([
@@ -46,7 +47,7 @@ const Questions = () => {
     },
   ]);
 
-  const toggleInfo = (info) => {
+  const toggleInfo = (info: InfoInterface) => {
     const { question, answer, isOpen, itemNumber } = info;
     setInfo((prevValue) => {
       const filteredList = prevValue.filter(
@@ -74,7 +75,7 @@ const Questions = () => {
         </h1>
 
         <div className="grid md:grid-cols-2 gap-5">
-          {infos.map((info: any, index) => {
+          {infos.map((info: InfoInterface, index) => {
             const { question, answer, isOpen } = info;
 
             return (
